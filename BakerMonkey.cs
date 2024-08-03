@@ -701,7 +701,7 @@ new Il2CppReferenceArray<TowerFilterModel>(0), "", "");
                 var attackModel = towerModel.GetAttackModel();
                 var WeaponModel = attackModel.weapons[0];
                 var projectileModel = WeaponModel.projectile;
-                towerModel.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 2, 50, 100f, null, false);
+                towerModel.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 2, 50, 100f, null, false, false);
                 var projectile = attackModel.weapons[0].projectile;
                 projectile.ApplyDisplay<CupcakeDisplay>();
 
@@ -731,7 +731,7 @@ new Il2CppReferenceArray<TowerFilterModel>(0), "", "");
 
             public override void ApplyUpgrade(TowerModel towerModel)
             {
-                towerModel.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 3, 50, 100f, null, false);
+                towerModel.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 3, 50, 100f, null, false, false);
                 var attackModel = towerModel.GetAttackModel();
                 var WeaponModel = attackModel.weapons[0];
                 var projectileModel = WeaponModel.projectile;
@@ -992,7 +992,7 @@ new Il2CppReferenceArray<TowerFilterModel>(0), "", "");
 
                     var projectile = attackModel.weapons[0].projectile;
                     projectile.ApplyDisplay<BakeryDisplay>();
-                    towerModel.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 9, 50, 100f, null, false);
+                    towerModel.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 9, 50, 100f, null, false, false);
 
                     towerModel.GetWeapon().projectile.AddBehavior(new TrackTargetModel("Track", 99999, false, false, 9999, true, 99999, true, false));
                     TowerModelBehaviorExt.GetBehavior<MonkeyCityIncomeSupportModel>(towerModel).incomeModifier = 40f;
